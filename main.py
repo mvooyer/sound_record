@@ -27,10 +27,7 @@ for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
     frames.append(data)
     data = np.frombuffer(data, dtype=np.int16)
     frames_p[i * CHUNK : (i + 1) * CHUNK] = data[:]
-    #print(np.frombuffer(data, dtype='B'))
-    #print(data[0:16], '\n')
-    #print(struct.unpack('>f', data[:4]))
-
+    
 print("finished recording")
 
 # stop Recording
