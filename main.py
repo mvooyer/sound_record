@@ -42,6 +42,5 @@ waveFile.setframerate(RATE)
 waveFile.writeframes(b''.join(frames))
 waveFile.close()
 
-#frames = np.reshape(frames, (1, int(RATE * RECORD_SECONDS)))
 plt.plot(time[:1000], frames_p[:1000])
 plt.show()
